@@ -6,7 +6,7 @@ const Header = ({count}) => {
      return (
           <div className='d-flex justify-content-between px-4 navbar'>
                <div className="logo ">
-                    <h4>Pen shop</h4>
+                    <h4>Pen store</h4>
                </div>
                <div className="icons fs-3">
                    <sup>{count}</sup><AiOutlineShoppingCart/>

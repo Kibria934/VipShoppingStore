@@ -48,14 +48,13 @@ function App() {
   }
 
   const addToCartBtn = (pen) => {
-    if (count >= 4) {
+    if (count >= 4 ) {
       openModal(true);
       return;
     }
     const newCart = [...cart, pen];
     setCart(newCart);
     setCount(count + 1)
-    console.log(cart);
   }
   const choseOnebtn = (selectedCarts) => {
     if (count!==0) {
@@ -63,13 +62,11 @@ function App() {
     const selectedCart = selectedCarts[rand];
       const resultElement = [selectedCart]
       setCart(resultElement);
-      console.log(cart);
     }
   }
  
   
   const selectCart = cart.map(singleCart => singleCart);
-  // console.log(selectCart);
 
   return (
     <div className='App'>
