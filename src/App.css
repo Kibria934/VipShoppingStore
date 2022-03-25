@@ -39,3 +39,12 @@
   position: absolute;
   bottom: 110px;
 }
+.deleteIcon{
+  font-size: 180px;
+  text-align: center;
+}
+.close{
+  position: absolute;
+  left: 13px;
+  top: 8px;
+}

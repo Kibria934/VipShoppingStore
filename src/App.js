@@ -1,13 +1,37 @@
 import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import Header from './components/Header/Header';
 import { useEffect, useState } from 'react';
 import Cart from './components/Cart/Cart';
 import Summary from './Summary/Summary';
+import Modal from 'react-modal';
+import { TiDelete } from 'react-icons/ti';
+import { CgClose } from 'react-icons/cg';
+
+//Modal=============
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+  },
+};
+Modal.setAppElement('#root');
 
 function App() {
+  // =============Modal start====================
+  const [modalIsOpen, setIsOpen] = useState(false);
+    function openModal() {
+    setIsOpen(true);
+    }
+    function closeModal() {
+    setIsOpen(false);
+  }
+  //===============Modal end================
   const [pens, setPens] = useState([]);
   const [cart, setCart] = useState([]);
   const [count, setCount] = useState(0);
@@ -25,6 +49,7 @@ function App() {
 
   const addToCartBtn = (pen) => {
     if (count >= 4) {
+      openModal(true);
       return;
     }
     const newCart = [...cart, pen];
@@ -73,6 +98,20 @@ function App() {
       </div>
       </div>
       </div> {/*cart section end */}
+       <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <div className='cart text-danger deleteIcon'>
+          <CgClose  onClick={closeModal} className='fs-4 text-black close'/>
+          <TiDelete />
+          <p className='fs-3'>Sorry!! <br />
+            You can't buy more than 4 pen.</p>
+        </div>
+      
+      </Modal>
     </div>
   );
 }
