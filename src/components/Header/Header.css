@@ -1,10 +1,13 @@
 .navbar{
-     background-color: rgba(39, 61, 102, 0.952) ;
+     background-color: rgb(41, 114, 68) ;
      height: 70px;
      align-items: center;
+     position:sticky;
+     top: 0px;
+     z-index: 10;
 }
 .logo h4{
-     color: rgb(255, 174, 0);
+     color: rgb(251, 251, 251);
      font-family: sans-serif;
      letter-spacing: .30rem;
      font-weight: 600;
@@ -12,14 +15,15 @@
      cursor: pointer;
 }
 .icons{
-     color: rgb(255, 166, 0);
+     color: rgb(255, 255, 255);
      cursor: pointer;
      padding-right: 30px;
      padding-bottom: 10px;
 }
 .icons sup{
-     color: rgb(199, 17, 17);
+     color: rgb(0, 0, 0);
      font-size: 20px;
      font-weight: 500;
-     text-shadow: 0px 0px 10px rgb(162, 0, 255);
+     text-shadow: 2px 2px 16px rgb(255, 255, 255);
+
 }
