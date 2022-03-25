@@ -1,0 +1,25 @@
+.navbar{
+     background-color: rgba(39, 61, 102, 0.952) ;
+     height: 70px;
+     align-items: center;
+}
+.logo h4{
+     color: rgb(255, 174, 0);
+     font-family: sans-serif;
+     letter-spacing: .30rem;
+     font-weight: 600;
+     text-shadow: 2px 2px 16px rgb(0, 0, 0);
+     cursor: pointer;
+}
+.icons{
+     color: rgb(255, 166, 0);
+     cursor: pointer;
+     padding-right: 30px;
+     padding-bottom: 10px;
+}
+.icons sup{
+     color: rgb(199, 17, 17);
+     font-size: 20px;
+     font-weight: 500;
+     text-shadow: 0px 0px 10px rgb(162, 0, 255);
+}
