@@ -4,6 +4,7 @@ import { BsCartCheck } from 'react-icons/bs';
 
 
 const Cart = (props) => {
+     const { addToCartBtn } = props;
      const { name, price, img, id, index, seller } = props.pen;
      return (
           <div className="cart">
@@ -16,7 +17,7 @@ const Cart = (props) => {
                     <h5>Brand name: { seller}</h5>
                </div>
                <div>
-                    <button> Add to Cart <BsCartCheck style={{ marginLeft: '10px', marginBottom:'5px'}}/> </button>
+                    <button onClick={addToCartBtn}> Add to Cart <BsCartCheck style={{ marginLeft: '10px', marginBottom:'5px'}}/> </button>
                </div>
           </div>
      );
