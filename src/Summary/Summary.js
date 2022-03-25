@@ -3,7 +3,7 @@ import './Summary.css'
 import { MdDelete } from 'react-icons/md';
 
 const Summary = (props) => {
-     const { name, img } = props.selectedCart;
+     const { name, img,id } = props.selectedCart;
 
 
      return (  

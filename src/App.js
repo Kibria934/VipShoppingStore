@@ -17,7 +17,11 @@ function App() {
       .then(res => res.json())
     .then(data => setPens(data))
   }, [])
-  
+   const resetBtn = () => {
+     setCart([]);
+     setCount(0)
+
+  }
 
   const addToCartBtn = (pen) => {
     if (count >= 4) {
@@ -27,11 +31,20 @@ function App() {
     setCart(newCart);
     setCount(count + 1)
     console.log(cart);
-
   }
-  const choseOnebtn = () => {
-      
+  const choseOnebtn = (selectedCarts) => {
+    if (count!==0) {
+      let rand = Math.floor(Math.random() * selectedCarts.length);
+    const selectedCart = selectedCarts[rand];
+      const resultElement = [selectedCart]
+      setCart(resultElement);
+      console.log(cart);
     }
+  }
+ 
+  
+  const selectCart = cart.map(singleCart => singleCart);
+  // console.log(selectCart);
 
   return (
     <div className='App'>
@@ -54,8 +67,8 @@ function App() {
             cart.map(selectedCart => <Summary key={selectedCart.id} selectedCart = {selectedCart}></Summary>)
             }
             <div className="button-div">
-               <button className='btn btn-success'>Chose One</button>
-               <button className='btn btn-danger ms-4'>Reset All</button>
+               <button onClick={()=>choseOnebtn(selectCart)} className='btn btn-success'>Chose One</button>
+               <button onClick={resetBtn} className='btn btn-danger ms-4'>Reset All</button>
            </div>
       </div>
       </div>
