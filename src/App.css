@@ -26,7 +26,7 @@
   z-index: 0.01;
   position: relative;
 }
-@media screen and (max-width:600px) and (min-width:350px) {
+@media screen and (max-width:770px) and (min-width:350px) {
   .cart-section{
     grid-template-columns: 1fr;
     margin: 110px 10px;
@@ -52,7 +52,7 @@
   margin-right: 10px;
   background-color:rgb(246, 229, 229);
 }
-@media screen and (max-width:600px) and (min-width:350px) {
+@media screen and (max-width:770px) and (min-width:350px) {
 .order-container{
   position: absolute;
   width: 100%;

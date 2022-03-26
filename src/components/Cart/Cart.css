@@ -7,7 +7,7 @@
      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
      position: relative;
 }
-@media screen and (max-width:600px) and (min-width:350px){
+@media screen and (max-width:770px) and (min-width:350px){
      .cart{
           width: 98%;
      }

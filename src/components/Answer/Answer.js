@@ -3,7 +3,6 @@ import React from 'react';
 const Answer = () => {
      return (
           <div>
-                
          <h5> Q1: How usestate work?</h5>
         <p><strong>Ans:</strong> UseState is a place,where we can placed  variables or any value for temporary time. If we need to chang anything in ui than we use usestate for this change. Maybe it handle by any button or something else.When we put a pair of variables it return one value. in single time UseState take one variable which is before change and another variable use for after change. It return the value of after changing. Like - We declare a state variable called count, and set it to 0. React will remember its current value between re-renders, and provide the most recent one to our function. If we want to update the current count, we can call setCount.  </p>
         <h5>Q2: Props vs state.</h5>

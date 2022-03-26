@@ -46,8 +46,9 @@ function App() {
      setCart([]);
      setCount(0)
 
-  }
-
+   }
+  
+// ========add to cart button handler===========
   const addToCartBtn = (pen) => {
     console.log(pen.id);
     const existCart = cart.find(data => data.id === pen.id);
@@ -63,6 +64,8 @@ function App() {
     setCart(newCart);
     setCount(count + 1)
   }
+
+  //==================Chose button handler================
   const choseOnebtn = (selectedCarts) => {
     if (count!==0) {
       let rand = Math.floor(Math.random() * selectedCarts.length);
@@ -72,23 +75,27 @@ function App() {
     }
   }
  
-  
   const selectCart = cart.map(singleCart => singleCart);
 
   return (
     <div className='App'>
 
+      
       {/*----- Navbar section --- */}
       <Header count ={count}></Header>
       <p className='text-center header-content'>Select <strong>4</strong> best luxury writing instrument....</p>
 
+      
       {/* ------- Card section -------- */}
       <div className="cart-container ">
       <div className="cart-section">
          {
         pens.map(pen=><Cart addToCartBtn ={()=>addToCartBtn(pen)} key={pen.id} pen = {pen}></Cart>)
       }
-    </div>
+        </div>
+
+
+        {/*-------- Right side selected Pen section---------- */}
         <div className="summary-container">
           <div className='order-container'>
             <h4 className='ms-4 mt-4 mb-4'> Your Selected Pen</h4>
@@ -102,6 +109,9 @@ function App() {
       </div>
       </div>
       </div> {/*cart section end */}
+
+
+      {/* ----------- Modal is here ------------ */}
        <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
@@ -111,11 +121,13 @@ function App() {
         <div className='cart text-danger deleteIcon'>
           <CgClose  onClick={closeModal} className='fs-4 text-black close'/>
           <TiDelete />
-          <p className='fs-3'>Sorry!! <br />
+          <p className='fs-3'><strong className='fs-1'>Oops..!!</strong> <br />
             You can't buy more than 4 pen.</p>
         </div>
-      
       </Modal>
+
+      
+      {/* ---------------Question answe section----------- */}
       <section className='question-ans'>
         <Answer></Answer>
      </section>
