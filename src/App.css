@@ -14,8 +14,8 @@
   box-shadow: 0 0  8px black;
 }
 .cart-container{
+  display: grid;
   grid-template-columns: 4fr 1fr;
-  overflow: hidden;
 }
 .cart-section{
   display: grid;
@@ -24,8 +24,22 @@
   overflow: hidden;
   z-index: 0.01;
 }
+@media screen and (max-width:600px) and (min-width:350px) {
+  .cart-section{
+    grid-template-columns: 1fr;
+    margin: 110px 10px;
+  }
+  .cart-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .header-content{
+    top: 100px;
+  }
+}
 .order-container{
-  width: 98%;
+  width: 350px;
   height: 600px;
   position: fixed;
   margin-top: 10px;
@@ -34,8 +48,16 @@
   margin-right: 10px;
   background-color:rgb(246, 229, 229);
 }
+@media screen and (max-width:600px) and (min-width:350px) {
+.order-container{
+  position: absolute;
+  width: 100%;
+  margin: 20px 10px;
+  }
+} 
+
 .button-div{
-  margin: 30px 70px;
+  margin: 30px 40px;
   position: absolute;
   bottom: 110px;
 }

@@ -76,7 +76,7 @@ function App() {
       <p className='text-center header-content'>Select <strong>4</strong> best luxury writing instrument....</p>
 
       {/* ------- Card section -------- */}
-      <div className="cart-container d-grid">
+      <div className="cart-container ">
       <div className="cart-section">
          {
         pens.map(pen=><Cart addToCartBtn ={()=>addToCartBtn(pen)} key={pen.id} pen = {pen}></Cart>)
