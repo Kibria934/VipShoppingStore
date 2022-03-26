@@ -7,7 +7,7 @@
   display: inline-block;
   transform: translateX(-50%);
   position: absolute;
-  top: 10%;
+  top: 18%;
   left:50%;
   padding: 5px 20px;
   background-color: rgb(255, 255, 255);
@@ -16,6 +16,7 @@
 .cart-container{
   display: grid;
   grid-template-columns: 4fr 1fr;
+  
 }
 .cart-section{
   display: grid;
@@ -23,6 +24,7 @@
   margin: 110px 50px;
   overflow: hidden;
   z-index: 0.01;
+  position: relative;
 }
 @media screen and (max-width:600px) and (min-width:350px) {
   .cart-section{
@@ -33,9 +35,11 @@
     display: grid;
     grid-template-columns: 1fr;
     width: 100%;
+
   }
   .header-content{
     top: 100px;
+    margin-bottom: 40px;
   }
 }
 .order-container{
@@ -53,6 +57,7 @@
   position: absolute;
   width: 100%;
   margin: 20px 10px;
+
   }
 } 
 
@@ -69,4 +74,17 @@
   position: absolute;
   left: 13px;
   top: 8px;
+}
+.question-ans{
+  width: 50%;
+  height: 600px;
+  padding: 20px;
+}
+@media screen and (max-width:770px) and (min-width:350px) {
+  .question-ans {
+    width: 100% !important;
+    margin-top: 160%;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+  }
 }
