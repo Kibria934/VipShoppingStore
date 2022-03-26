@@ -11,7 +11,7 @@ const Summary = (props) => {
                <div className='me-4'><img src={img} style={{ width: '50px',border:'4px solid #c2fbd7', borderRadius:'50%'}} alt="" /></div>
                <div className='d-flex align-items-center ' >
                     <div>
-                         <h3 className='py-1'>{name}</h3>
+                         <h5 className='py-2'>{name}</h5>
                     </div>
                  <div> <  MdDelete className=' deleteIcon fs-3'/></div>
                     
