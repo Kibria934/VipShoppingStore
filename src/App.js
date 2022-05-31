@@ -10,7 +10,7 @@ import { TiDelete } from 'react-icons/ti';
 import { CgClose } from 'react-icons/cg';
 import Answer from './components/Answer/Answer';
 
-//Modal=============
+//Modal-------
 const customStyles = {
   content: {
     top: '50%',
